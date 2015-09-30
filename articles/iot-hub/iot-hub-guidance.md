@@ -27,7 +27,7 @@ The services, however, have many differences, that are detailed in the following
 | ---- | ------- | ---------- |
 | Communication patterns | Device-to-cloud event ingress and cloud-to-device messaging. | Only event ingress (usually considered for device-to-cloud scenarios). |
 | Security | Per-device identity and revocable access control. Refer to [IoT Hub Developer Guide - Security]. | Event Hub-wide [Shared Access Policies][Event Hub - security], with limited revocation support using [publisher's policies][Event Hub publisher policies]. In the context of IoT solutions, it is often required to implement custom solution to support per-device credentials, and anti-spoofing measures. |
-| Scale | IoT Hubs is optimized to support millions of simultaneously connected devices. | Event Hubs can support a more limited number of simultaneous connections: up to 5.000 AMQP connection, as per [Service Bus Quotas]. On the other hand, Event Hubs lets users specify the partition for each message sent. |
+| Scale | IoT Hubs is optimized to support millions of simultaneously connected devices. | Event Hubs can support a more limited number of simultaneous connections: up to 5,000 AMQP connection, as per [Service Bus Quotas]. On the other hand, Event Hubs lets users specify the partition for each message sent. |
 | Device SDKs | IoT Hub provides [device SDKs][Azure IoT Hub SDKs] for a large variety of platforms and languages | Event Hubs is supported on .NET, C, and provides AMQP and HTTP send interfaces. |
 
 In conclusion, even if the only use case is device-to-cloud telemetry ingress, IoT Hub provides a service that is specifically designed for IoT device connectivity, and will continue to expand the value propositions for these scenarios with IoT-specific features. Event Hubs is designed for event ingress at massive scale, both in the context of inter and intra-data center scenarios.
@@ -145,7 +145,7 @@ At a high level, in order to implement a regional failover model with IoT Hub, y
 [Azure Traffic Manager]: https://azure.microsoft.com/documentation/services/traffic-manager/
 [Event Hub - security]: ../event-hubs/event-hubs-authentication-and-security-model-overview/
 [Event Hub publisher policies]: ../event-hubs-overview/#common-publisher-tasks
-[Service Bus Quotas]: ../service-bus/service-bus-quotas/
+[Service Bus Quotas]: ../service-bus-quotas/
 [Azure IoT Hub SDKs]: https://github.com/Azure/azure-iot-sdks/blob/master/readme.md
 
 [TLS-PSK]: https://tools.ietf.org/html/rfc4279
